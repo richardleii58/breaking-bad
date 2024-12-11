@@ -5,7 +5,119 @@ body {
     background-color: #f0f0f0;
     color: #333;
   }
-  
+
+  /* Flex container for titles and troll faces */
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between troll faces and titles */
+    margin-bottom: 20px;
+  }
+
+  /* Style each troll face */
+  .troll-face {
+    width: 160px; /* Adjust size as needed */
+    height: 160px;
+    animation: spin3d 3s linear infinite; /* Spinning animation */
+  }
+
+  /* Ensure troll face images fit properly */
+  .troll-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @keyframes spin3d {
+    0% {
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+    25% {
+      transform: rotateY(90deg) rotateX(0deg);
+    }
+    50% {
+      transform: rotateY(180deg) rotateX(0deg);
+    }
+    75% {
+      transform: rotateY(270deg) rotateX(0deg);
+    }
+    100% {
+      transform: rotateY(360deg) rotateX(0deg);
+    }
+  }
+
+  /* General container styling */
+  .stock-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .stock-input label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .stock-search {
+    width: 98%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+
+  .stock-search:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  .stock-price-display {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 10px;
+  }
+
+  .stock-price-display p {
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  /* Checkbox for live price toggle */
+  label input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  label input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  /* Manual price input styling */
+  input[type="number"] {
+    width: calc(100% - 16px);
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
   .container {
     padding: 20px;
     margin: 20px auto;
